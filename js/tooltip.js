@@ -13,6 +13,7 @@ function tooltip() {
 	;
 
 	function createTooltip() {
+		$tooltipLink.removeAttr('title');
 		$('body').append($tooltipElement);
 		fadeInTooltip();
 	}
