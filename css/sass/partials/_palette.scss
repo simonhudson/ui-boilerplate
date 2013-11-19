@@ -1,0 +1,43 @@
+//
+// Each colour is available in 3 tints (100%, 66% and 33%)
+//
+$palette_primary100: #bcd530;
+$palette_primary66: #d3e377;
+$palette_primary33: #e9f1bb;
+$palette_secondary100: #27aae1;
+$palette_secondary66: #71c7eb;
+$palette_secondary33: #b8e3f5;
+$palette_bodyText: #444A55;
+
+.palette {
+	float:left;
+	text-align:center;
+	width:100%;
+
+	div {
+		display:inline-block;
+		float:left;
+		margin:0 10px 0 0;
+		padding:10px;
+
+		&.primary-100 {
+			background:$palette_primary100;
+		}
+		&.primary-66 {
+			background:$palette_primary66;
+		}
+		&.primary-33 {
+			background:$palette_primary33;
+		}
+		&.secondary-100 {
+			background:$palette_secondary100;
+		}
+		&.secondary-66 {
+			background:$palette_secondary66;
+		}
+		&.secondary-33 {
+			background:$palette_secondary33;
+		}
+	}
+
+}

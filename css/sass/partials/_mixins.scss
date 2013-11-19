@@ -1,0 +1,99 @@
+@mixin hidden {
+	font-size:0 !important;
+	height:0 !important;
+	left:-999% !important;
+	line-height:0 !important;
+	overflow:hidden !important;
+	position:absolute !important;
+	width:0 !important;
+}
+
+@mixin needleRotate($degrees) {
+	-webkit-transform:rotate(#{$degrees}deg);
+	-moz-transform:rotate(#{$degrees}deg);
+	-ms-transform:rotate(#{$degrees}deg);
+	-o-transform:rotate(#{$degrees}deg);
+	transform:rotate(#{$degrees}deg);
+	-webkit-transform-origin:right center;
+	-ms-transform-origin:right center;
+	transform-origin:right center;
+}
+
+@mixin borderRadius($tl, $tr, $br, $bl) {
+	border-top-left-radius:#{$tl};
+	border-top-right-radius:#{$tl};
+	border-bottom-right-radius:#{$tl};
+	border-bottom-left-radius:#{$tl};
+}
+
+@mixin boxShadow($x, $y, $spread, $color) {
+	box-shadow:#{$x} #{$y} #{$spread} #{$color};
+}
+
+@mixin animate($property, $speed) {
+	-moz-transition:#{$property} #{$speed} linear;
+	-o-transition:#{$property} #{$speed} linear;
+	-webkit-transition:#{$property} #{$speed} linear;
+	transition:#{$property} #{$speed} linear;
+}
+
+@mixin vertGradient($colorTop, $colorBottom) {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$colorTop}', endColorstr='#{$colorBottom}');
+	background:-webkit-gradient(linear, left top, left bottom, from(#{$colorTop}), to(#{$colorBottom}));
+	background:-moz-linear-gradient(top, #{$colorTop}, #{$colorBottom});
+}
+
+@mixin arrowUp($borderWidth, $color) {
+	border-left:#{$borderWidth} solid transparent;
+	border-right:#{$borderWidth} solid transparent;
+	border-bottom:#{$borderWidth} solid #{$color} ;
+	height:0;
+	width:0;
+}
+
+@mixin arrowDown($borderWidth, $color) {
+	border-left:#{$borderWidth} solid transparent;
+	border-right:#{$borderWidth} solid transparent;
+	border-top:#{$borderWidth} solid #{$color} ;
+	height:0;
+	width:0;
+}
+
+@mixin arrowLeft($borderWidth, $color) {
+	border-top:#{$borderWidth} solid transparent;
+	border-bottom:#{$borderWidth} solid transparent;
+	border-right:#{$borderWidth} solid #{$color} ;
+	height:0;
+	width:0;
+}
+
+@mixin arrowRight($borderWidth, $color) {
+	border-top:#{$borderWidth} solid transparent;
+	border-bottom:#{$borderWidth} solid transparent;
+	border-left:#{$borderWidth} solid #{$color} ;
+	height:0;
+	width:0;
+}
+
+@mixin sprite {
+	background-image:url(../imgs/main-sprite.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+@mixin arrowIcon {
+	background:url(../imgs/dir-arrow-sprite.png) 0 0 no-repeat transparent;
+}
+
+@mixin fauxButton {
+	@include borderRadius(2px, 2px, 2px, 2px);
+	@include vertGradient(#fdfdfd, #ededed);
+	border:1px solid #d6d7dc;
+	padding:5px;
+	width:auto;
+}
+
+@mixin fauxButtonInvert {
+	@include fauxButton;
+	@include vertGradient(#ededed, #fdfdfd);
+}

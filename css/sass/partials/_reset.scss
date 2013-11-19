@@ -1,0 +1,32 @@
+/*
+Reset
+------------------------------*/
+//
+// @font-face {
+//	font-family: VerbRegular;
+//	src: url('../fonts/Verb/VerbRegular.otf');
+//}
+//
+*, fieldset {margin:0; padding:0;}
+html {font-size:62.5%;}
+body {background:#fff; color:$palette_bodyText; font-family:arial, helvetica, sans-serif; font-size:1.2em;}
+fieldset, img {border:none;}
+p, li, dt, dd, label, input, textarea, legend, pre, table {font-size:1em;}
+strong, a, em {font-size:inherit;}
+pre {font-family:"Courier New", Courier, monospace;}
+abbr, acronym {border-bottom:1px dotted $palette_bodyText; cursor:help; font-family:inherit;}
+.clear {clear:both;}
+/* Header skip links */
+#access-links li {display:inline; list-style-type:none;}
+#access-links li a, #access-links li a:hover {color:#fff; font-size:1em; font-weight:bold; height:0; left:-999%; overflow:hidden; padding:.3em; position:absolute; top:0; text-decoration:none;}
+#access-links li a:active, #access-links li a:focus {background:$palette_bodyText; color:#fff; height:auto; left:0; padding:.5em 2em .8em 2em; position:absolute; top:0; width:auto; z-index:1000;}
+input[type=search] { -webkit-appearance:none;}
+.hidden {
+	font-size:0 !important;
+	height:0 !important;
+	left:-999% !important;
+	line-height:0 !important;
+	overflow:hidden !important;
+	position:absolute !important;
+	width:0 !important;
+}

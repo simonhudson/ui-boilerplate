@@ -1,0 +1,17 @@
+/*
+Global concertina
+----------------------------------*/
+.concertina-wrap {
+
+	.sprite {
+		display:inline-block;
+		height:12px;
+		margin-right:5px;
+		width:12px;
+		
+		&.active {
+			background-position:-13px 0;
+		}
+	}
+
+}

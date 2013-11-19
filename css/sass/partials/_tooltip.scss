@@ -1,0 +1,21 @@
+/*
+Tooltip
+----------------------------------*/
+.tooltip-wrap {
+	@include borderRadius(3px, 3px, 3px, 3px);
+	@include boxShadow(0, 0, 3px, #000);
+	background:#555;
+	border:1px solid #fff;
+	color:#fff;
+	max-width:200px;
+	opacity:0;
+	width:auto;
+
+	.inner {
+		padding:.5em 1em;
+	}
+
+	p:last-of-type {
+		padding:0;
+	}
+}

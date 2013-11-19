@@ -1,0 +1,344 @@
+.palette {
+  float: left;
+  text-align: center;
+  width: 100%; }
+  .palette div {
+    display: inline-block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 10px; }
+    .palette div.primary-100 {
+      background: #bcd530; }
+    .palette div.primary-66 {
+      background: #d3e377; }
+    .palette div.primary-33 {
+      background: #e9f1bb; }
+    .palette div.secondary-100 {
+      background: #27aae1; }
+    .palette div.secondary-66 {
+      background: #71c7eb; }
+    .palette div.secondary-33 {
+      background: #b8e3f5; }
+
+/*
+Reset
+------------------------------*/
+*, fieldset {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #fff;
+  color: #444a55;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1.2em; }
+
+fieldset, img {
+  border: none; }
+
+p, li, dt, dd, label, input, textarea, legend, pre, table {
+  font-size: 1em; }
+
+strong, a, em {
+  font-size: inherit; }
+
+pre {
+  font-family: "Courier New", Courier, monospace; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #444a55;
+  cursor: help;
+  font-family: inherit; }
+
+.clear {
+  clear: both; }
+
+/* Header skip links */
+#access-links li {
+  display: inline;
+  list-style-type: none; }
+
+#access-links li a, #access-links li a:hover {
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  height: 0;
+  left: -999%;
+  overflow: hidden;
+  padding: .3em;
+  position: absolute;
+  top: 0;
+  text-decoration: none; }
+
+#access-links li a:active, #access-links li a:focus {
+  background: #444a55;
+  color: #fff;
+  height: auto;
+  left: 0;
+  padding: .5em 2em .8em 2em;
+  position: absolute;
+  top: 0;
+  width: auto;
+  z-index: 1000; }
+
+input[type=search] {
+  -webkit-appearance: none; }
+
+.hidden {
+  font-size: 0 !important;
+  height: 0 !important;
+  left: -999% !important;
+  line-height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 0 !important; }
+
+/*
+Global layout
+----------------------------------*/
+body {
+  padding: 20px; }
+
+.sprite {
+  background-image: url(../imgs/main-sprite.png);
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+/*
+Global typography
+----------------------------------*/
+p, li {
+  line-height: 1.6em;
+  padding-bottom: 1.4em; }
+  p:last-of-type, li:last-of-type {
+    padding-bottom: 0; }
+
+/*
+Global navigation
+----------------------------------*/
+/*
+Modal window
+----------------------------------*/
+.ui-dialog {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 0 20px black;
+  background: #fff;
+  border: 10px solid #e9f1bb;
+  display: block;
+  outline: 0;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  z-index: 5001; }
+
+.ui-widget-overlay {
+  background: #000000;
+  left: 0;
+  outline: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5000; }
+
+.close-dialog {
+  line-height: 1em;
+  margin-bottom: 0;
+  text-align: right; }
+  .close-dialog .sprite {
+    background-position: -130px 0;
+    display: block;
+    float: right;
+    height: 10px;
+    margin: 0;
+    width: 10px; }
+
+/*
+Box messages
+----------------------------------*/
+.box-msg {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 10px;
+  padding: 10px;
+  position: relative;
+  /* Error/Alert */
+  /* Warning */
+  /* Success */
+  /* Info */
+  /* No JS warning */
+  /* Close message */ }
+  .box-msg .sprite {
+    background-position: 0 0;
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 10px;
+    width: 20px; }
+  .box-msg p {
+    padding-left: 30px;
+    /* Stops text wrapping around icon */ }
+  .box-msg a {
+    color: #444a55;
+    text-decoration: underline; }
+    .box-msg a:hover, .box-msg a:focus {
+      text-decoration: none; }
+  .box-msg .box-msg-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.2em;
+    padding: 0; }
+  .box-msg.error, .box-msg.alert {
+    background-color: #fdf3f4;
+    border-color: #ef0000; }
+    .box-msg.error .box-msg-title, .box-msg.alert .box-msg-title {
+      color: #ef0000; }
+    .box-msg.error .sprite, .box-msg.alert .sprite {
+      background-position: -110px 0; }
+  .box-msg.warning {
+    background-color: #fffbe3;
+    border-color: #ffd800; }
+    .box-msg.warning .sprite {
+      background-position: -90px 0; }
+  .box-msg.success {
+    background-color: #ecfbe8;
+    border-color: #28d300; }
+    .box-msg.success .box-msg-title {
+      color: #28d300; }
+    .box-msg.success .sprite {
+      background-position: -50px 0; }
+  .box-msg.info {
+    background-color: #e8f8fb;
+    border-color: #00c7eb; }
+    .box-msg.info .box-msg-title {
+      color: #00c7eb; }
+    .box-msg.info .sprite {
+      background-position: -70px 0; }
+  .box-msg.no-js {
+    border-width: 5px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center; }
+    .box-msg.no-js .box-msg-title {
+      font-family: 'VerbBold', arial, helvetica, sans-serif;
+      font-size: 1.8em; }
+    .box-msg.no-js .sprite {
+      display: block;
+      float: none;
+      margin: -10px auto 10px; }
+    .box-msg.no-js p {
+      padding-left: 0; }
+  .box-msg .close-message {
+    line-height: .8em;
+    position: absolute;
+    right: 6px;
+    top: 10px; }
+    .box-msg .close-message .sprite {
+      background-position: -130px 0;
+      height: 10px;
+      margin: 0;
+      width: 10px; }
+    .box-msg .close-message:hover, .box-msg .close-message:focus {
+      text-decoration: underline; }
+
+/*
+Global concertina
+----------------------------------*/
+.concertina-wrap .sprite {
+  display: inline-block;
+  height: 12px;
+  margin-right: 5px;
+  width: 12px; }
+  .concertina-wrap .sprite.active {
+    background-position: -13px 0; }
+
+/*
+Carousel
+
+Notes:
+	1. Do NOT add padding to .carousel-wrap, otherwise it will increase the width and mess up the positioning maths in the JS.
+	   If you need padding inside the carousel, add it to .carousel-inner
+
+----------------------------------*/
+.carousel-wrap.js-on {
+  border: 1px solid #ddd;
+  overflow: hidden; }
+  .carousel-wrap.js-on .carousel-inner,
+  .carousel-wrap.js-on .carousel-item-count,
+  .carousel-wrap.js-on .carousel-nav {
+    padding: 1em; }
+  .carousel-wrap.js-on .carousel-inner {
+    float: left;
+    margin-left: 0;
+    overflow: hidden; }
+  .carousel-wrap.js-on .carousel-item {
+    display: inline;
+    float: left; }
+  .carousel-wrap.js-on .sprite {
+    background-position: 0 0;
+    display: inline-block;
+    height: 12px;
+    margin: 0;
+    width: 12px; }
+    .carousel-wrap.js-on .sprite.disabled {
+      opacity: .5; }
+  .carousel-wrap.js-on .carousel-nav li {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#ededed');
+    background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#ededed));
+    background: -moz-linear-gradient(top, #fdfdfd, #ededed);
+    border: 1px solid #d6d7dc;
+    padding: 5px;
+    width: auto;
+    display: inline-block;
+    list-style: none outside;
+    padding: 0; }
+  .carousel-wrap.js-on .carousel-nav a {
+    display: inline-block;
+    padding: 5px 10px 0 10px; }
+  .carousel-wrap.js-on .carousel-prev .sprite {
+    background-position: -26px 0; }
+  .carousel-wrap.js-on .carousel-next .sprite {
+    background-position: -38px 0; }
+  .carousel-wrap.js-on .disabled {
+    cursor: default;
+    opacity: .3; }
+
+/*
+Tabbed content
+----------------------------------*/
+.tabbed-content-wrap.js-on .tab-links li {
+  display: inline;
+  list-style: none outside; }
+
+/*
+Tooltip
+----------------------------------*/
+.tooltip-wrap {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 0 3px black;
+  background: #555;
+  border: 1px solid #fff;
+  color: #fff;
+  max-width: 200px;
+  opacity: 0;
+  width: auto; }
+  .tooltip-wrap .inner {
+    padding: .5em 1em; }
+  .tooltip-wrap p:last-of-type {
+    padding: 0; }

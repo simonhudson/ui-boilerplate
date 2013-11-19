@@ -1,0 +1,155 @@
+/*
+Box messages
+----------------------------------*/
+$errorPrimary: #ef0000;
+$errorPastelle: #fdf3f4;
+$warningPrimary: #ffd800;
+$warningPastelle: #fffbe3;
+$successPrimary: #28d300;
+$successPastelle: #ecfbe8;
+$infoPrimary: #00c7eb;
+$infoPastelle: #e8f8fb;
+$iconPositionY: 0;
+$msgIconHeight: 20px;
+$msgIconWidth: 20px;
+$boxMsgPadding: 10px;
+
+.box-msg {
+	@include borderRadius(3px, 3px, 3px, 3px);
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:10px;
+	padding:$boxMsgPadding;
+	position:relative;
+
+	.sprite {
+		background-position:0 0;
+		display:block;
+		float:left;
+		height:$msgIconHeight;
+		margin-right:10px;
+		width:$msgIconWidth;
+	}
+
+	p {
+		 padding-left:$msgIconWidth + 10; /* Stops text wrapping around icon */
+	}
+
+	a {
+		color:$palette_bodyText;
+		text-decoration:underline;
+
+		&:hover,
+		&:focus {
+			text-decoration:none;
+		}
+	}
+
+	.box-msg-title {
+		font-size:1.4em;
+		font-weight:bold;
+		line-height:1.2em;
+		padding:0;
+	}
+
+	/* Error/Alert */
+	&.error,
+	&.alert {
+		background-color:$errorPastelle;
+		border-color:$errorPrimary;
+
+		.box-msg-title {
+			color:$errorPrimary;
+		}
+
+		.sprite {
+			background-position:-110px $iconPositionY;
+		}
+	}
+
+	/* Warning */
+	&.warning {
+		background-color:$warningPastelle;
+		border-color:$warningPrimary;
+
+		.sprite {
+			background-position:-90px $iconPositionY;
+		}
+
+	}
+
+	/* Success */
+	&.success {
+		background-color:$successPastelle;
+		border-color:$successPrimary;
+		
+		.box-msg-title {
+			color:$successPrimary;
+		}
+
+		.sprite {
+			background-position:-50px $iconPositionY;
+		}
+
+	}
+
+	/* Info */	
+	&.info {
+		background-color:$infoPastelle;
+		border-color:$infoPrimary;
+		
+		.box-msg-title {
+			color:$infoPrimary;
+		}
+
+		.sprite {
+			background-position:-70px $iconPositionY;
+		}
+
+	}
+
+	/* No JS warning */
+	&.no-js {
+		border-width:5px;
+		margin-bottom:10px;
+		padding:20px;
+		text-align:center;
+
+		.box-msg-title {
+			font-family:'VerbBold', arial, helvetica, sans-serif;
+			font-size:1.8em;
+		}
+
+		.sprite {
+			display:block;
+			float:none;
+			margin:-10px auto 10px;
+		}
+
+		p {
+			padding-left:0;
+		}
+
+	}
+
+	/* Close message */
+	.close-message {
+		line-height:.8em;
+		position:absolute;
+		right:6px;
+		top:$boxMsgPadding;
+
+		.sprite {
+			background-position:-130px 0;
+			height:10px;
+			margin:0;
+			width:10px;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration:underline;
+		}
+
+	}
+}

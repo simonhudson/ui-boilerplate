@@ -1,0 +1,19 @@
+// Client specific colour palette //
+@import 'partials/palette';
+
+// Base //
+@import 'partials/mixins';
+@import 'partials/reset';
+
+// Global styles //
+@import 'partials/global-layout';
+@import 'partials/global-typo';
+@import 'partials/global-nav';
+
+// Re-usable UI //
+@import 'partials/modal-window';
+@import 'partials/box-messages';
+@import 'partials/concertina';
+@import 'partials/carousel';
+@import 'partials/tabbed-content';
+@import 'partials/tooltip';

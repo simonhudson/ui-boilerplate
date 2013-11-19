@@ -1,0 +1,72 @@
+/*
+Carousel
+
+Notes:
+	1. Do NOT add padding to .carousel-wrap, otherwise it will increase the width and mess up the positioning maths in the JS.
+	   If you need padding inside the carousel, add it to .carousel-inner
+
+----------------------------------*/
+
+.carousel-wrap.js-on {
+	border:1px solid #ddd;
+	overflow:hidden;
+
+	.carousel-inner,
+	.carousel-item-count,
+	.carousel-nav {
+		padding:1em;
+	}
+
+	.carousel-inner {
+		float:left;
+		margin-left:0;
+		overflow:hidden;
+	}
+
+	.carousel-item {
+		display:inline;
+		float:left;
+	}
+
+	.sprite {
+		background-position:0 0;
+		display:inline-block;
+		height:12px;
+		margin:0;
+		width:12px;
+
+		&.disabled {
+			opacity:.5;
+		}
+	}
+
+	.carousel-nav {
+
+		li {
+			@include fauxButton;
+			display:inline-block;
+			list-style:none outside;
+			padding:0;
+		}
+
+		a {
+			display:inline-block;
+			padding:5px 10px 0 10px;
+		}
+
+	}
+
+	.carousel-prev .sprite {
+		background-position:-26px 0;
+	}
+
+	.carousel-next .sprite {
+		background-position:-38px 0;
+	}
+
+	.disabled {
+		cursor:default;
+		opacity:.3;
+	}
+
+}

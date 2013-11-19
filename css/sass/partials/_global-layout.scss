@@ -1,0 +1,9 @@
+/*
+Global layout
+----------------------------------*/
+body {
+	padding:20px;
+}
+.sprite {
+	@include sprite;
+}
