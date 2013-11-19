@@ -8,8 +8,8 @@ SET self_path=%~dp0
 @pushd %script_dir%
 @pushd ..\
 SET css_path=%cd%\css\
-SET css_output_file_name=smartset.min.css
-SET css_tmp=smartset.tmp.css
+SET css_output_file_name=smartsoft.min.css
+SET css_tmp=smartsoft.tmp.css
 @popd
 
 ECHO Compresses all .css files into a single .css file called "%css_output_file_name%".

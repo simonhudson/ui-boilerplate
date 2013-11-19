@@ -8,8 +8,8 @@ REM SET self_path=%~dp0
 REM @pushd %script_dir%
 REM @pushd ..\
 SET js_path=..\js\
-SET js_concatenated=smartset.concatenated.js
-SET js_output_file_name=smartset.min.js
+SET js_concatenated=smartsoft.concatenated.js
+SET js_output_file_name=smartsoft.min.js
 REM @popd
 
 ECHO Compresses all .js files into a single .js file called "%js_output_file_name%".
