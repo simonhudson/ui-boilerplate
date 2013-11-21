@@ -11,4 +11,4 @@ function closeBoxMessage() {
 		return false;
 	});
 }
-$('.box-msg').each(closeBoxMessage);
+$('.feedback-msg').each(closeBoxMessage);

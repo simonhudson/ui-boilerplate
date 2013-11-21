@@ -50,25 +50,25 @@
 <br />
 
 <h2>Box messages</h2>
-<div class="box-msg success">
+<div class="feedback-msg success">
 	<span class="sprite"></span>
-	<p class="box-msg-title">Congratulations!</p>
+	<p class="feedback-msg-title">Congratulations!</p>
 	<p>You have successfully signed up.</p>
 </div><!--/success-->
-<div class="box-msg info">
+<div class="feedback-msg info">
 	<span class="sprite"></span>
-	<p class="box-msg-title">Information</p>
+	<p class="feedback-msg-title">Information</p>
 	<p>You are now using version 2.3 of the software. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis metus porttitor, facilisis sem in, tincidunt purus. Aliquam ac commodo magna. Integer vel ullamcorper sem. Mauris vehicula sapien et sem tempus, sit amet laoreet enim congue. Nam bibendum, eros vitae eleifend porttitor, augue turpis bibendum nulla, ac consequat augue erat elementum quam. Nam fringilla lorem vel lorem commodo, ut mollis magna accumsan. Nam urna enim, euismod vitae lobortis ac, vestibulum id est. Suspendisse condimentum orci quis lobortis ultricies. Nulla fringilla dictum nisi, vel vulputate risus rhoncus a. Pellentesque condimentum eros vel lectus tincidunt molestie. Aenean vestibulum, lectus sit amet consectetur tristique, dolor orci feugiat erat, ut rhoncus nibh sapien non dolor. Morbi ultrices eros dolor, ac suscipit ipsum placerat eu. </p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis metus porttitor, facilisis sem in, tincidunt purus. Aliquam ac commodo magna. Integer vel ullamcorper sem. Mauris vehicula sapien et sem tempus, sit amet laoreet enim congue. Nam bibendum, eros vitae eleifend porttitor, augue turpis bibendum nulla, ac consequat augue erat elementum quam. Nam fringilla lorem vel lorem commodo, ut mollis magna accumsan. Nam urna enim, euismod vitae lobortis ac, vestibulum id est. Suspendisse condimentum orci quis lobortis ultricies. Nulla fringilla dictum nisi, vel vulputate risus rhoncus a. Pellentesque condimentum eros vel lectus tincidunt molestie. Aenean vestibulum, lectus sit amet consectetur tristique, dolor orci feugiat erat, ut rhoncus nibh sapien non dolor. Morbi ultrices eros dolor, ac suscipit ipsum placerat eu.</p>
 </div><!--/success-->
-<div class="box-msg warning">
+<div class="feedback-msg warning">
 	<span class="sprite"></span>
-	<p class="box-msg-title">Are you sure you want to delete this file?</p>
+	<p class="feedback-msg-title">Are you sure you want to delete this file?</p>
 	<p>Once the file is deleted there is no way to retrieve it.</p>
 </div><!--/success-->
-<div class="box-msg error">
+<div class="feedback-msg error">
 	<span class="sprite"></span>
-	<p class="box-msg-title">Your file was not successfully deleted. Please try again.</p>
+	<p class="feedback-msg-title">Your file was not successfully deleted. Please try again.</p>
 </div><!--/success-->
 
 <br />

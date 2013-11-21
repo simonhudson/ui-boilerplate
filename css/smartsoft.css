@@ -159,9 +159,9 @@ Modal window
     width: 10px; }
 
 /*
-Box messages
+Feedback messages
 ----------------------------------*/
-.box-msg {
+.feedback-msg {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -177,77 +177,77 @@ Box messages
   /* Info */
   /* No JS warning */
   /* Close message */ }
-  .box-msg .sprite {
+  .feedback-msg .sprite {
     background-position: 0 0;
     display: block;
     float: left;
     height: 20px;
     margin-right: 10px;
     width: 20px; }
-  .box-msg p {
+  .feedback-msg p {
     padding-left: 30px;
     /* Stops text wrapping around icon */ }
-  .box-msg a {
+  .feedback-msg a {
     color: #444a55;
     text-decoration: underline; }
-    .box-msg a:hover, .box-msg a:focus {
+    .feedback-msg a:hover, .feedback-msg a:focus {
       text-decoration: none; }
-  .box-msg .box-msg-title {
+  .feedback-msg .feedback-msg-title {
     font-size: 1.4em;
     font-weight: bold;
     line-height: 1.2em;
     padding: 0; }
-  .box-msg.error, .box-msg.alert {
+  .feedback-msg.error, .feedback-msg.alert {
     background-color: #fdf3f4;
     border-color: #ef0000; }
-    .box-msg.error .box-msg-title, .box-msg.alert .box-msg-title {
+    .feedback-msg.error .feedback-msg-title, .feedback-msg.alert .feedback-msg-title {
       color: #ef0000; }
-    .box-msg.error .sprite, .box-msg.alert .sprite {
+    .feedback-msg.error .sprite, .feedback-msg.alert .sprite {
       background-position: -110px 0; }
-  .box-msg.warning {
+  .feedback-msg.warning {
     background-color: #fffbe3;
     border-color: #ffd800; }
-    .box-msg.warning .sprite {
+    .feedback-msg.warning .sprite {
       background-position: -90px 0; }
-  .box-msg.success {
+  .feedback-msg.success {
     background-color: #ecfbe8;
     border-color: #28d300; }
-    .box-msg.success .box-msg-title {
+    .feedback-msg.success .feedback-msg-title {
       color: #28d300; }
-    .box-msg.success .sprite {
+    .feedback-msg.success .sprite {
       background-position: -50px 0; }
-  .box-msg.info {
+  .feedback-msg.info {
     background-color: #e8f8fb;
     border-color: #00c7eb; }
-    .box-msg.info .box-msg-title {
+    .feedback-msg.info .feedback-msg-title {
       color: #00c7eb; }
-    .box-msg.info .sprite {
+    .feedback-msg.info .sprite {
       background-position: -70px 0; }
-  .box-msg.no-js {
+  .feedback-msg.no-js {
     border-width: 5px;
     margin-bottom: 10px;
     padding: 20px;
     text-align: center; }
-    .box-msg.no-js .box-msg-title {
+    .feedback-msg.no-js .feedback-msg-title {
       font-family: 'VerbBold', arial, helvetica, sans-serif;
       font-size: 1.8em; }
-    .box-msg.no-js .sprite {
+    .feedback-msg.no-js .sprite {
       display: block;
       float: none;
       margin: -10px auto 10px; }
-    .box-msg.no-js p {
+    .feedback-msg.no-js p {
       padding-left: 0; }
-  .box-msg .close-message {
+  .feedback-msg .close-message {
     line-height: .8em;
     position: absolute;
     right: 6px;
     top: 10px; }
-    .box-msg .close-message .sprite {
+    .feedback-msg .close-message .sprite {
       background-position: -130px 0;
       height: 10px;
       margin: 0;
       width: 10px; }
-    .box-msg .close-message:hover, .box-msg .close-message:focus {
+    .feedback-msg .close-message:hover, .feedback-msg .close-message:focus {
       text-decoration: underline; }
 
 /*

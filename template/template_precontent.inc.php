@@ -28,9 +28,9 @@ $enableQUnitTests = true;
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>UI Boilerplate</title>
 <?php if ($serveMinifiedCssJs) { ?>
-<link href="<?php echo $sitePath['css']; ?>smartset.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo $sitePath['css']; ?>smartsoft.min.css" media="all" rel="stylesheet" type="text/css" />
 <?php } else { ?>
-<link href="<?php echo $sitePath['css']; ?>smartset.css" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo $sitePath['css']; ?>smartsoft.css" media="all" rel="stylesheet" type="text/css" />
 <?php } ?>
 </head>
 <body>
@@ -41,9 +41,9 @@ $enableQUnitTests = true;
 	</ul>
 </div>
 <noscript>
-	<div class="box-msg warning no-js">
+	<div class="feedback-msg warning no-js">
 		<span class="sprite"></span>
-		<p class="box-msg-title">Warning! JavaScript is not enabled.</p>
+		<p class="feedback-msg-title">Warning! JavaScript is not enabled.</p>
 		<p>This software requires your browser to have JavaScript enabled.</p>
 	</div>
 </noscript>

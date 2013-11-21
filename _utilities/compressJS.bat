@@ -5,31 +5,38 @@ REM Uses the YUI compressor
 REM **************************
 
 REM SET self_path=%~dp0
-REM @pushd %script_dir%
-REM @pushd ..\
-SET js_path=..\js\
-SET js_concatenated=smartsoft.concatenated.js
+ECHO off
+
+REM **************************
+REM Uses the YUI compressor
+REM **************************
+
+SET self_path=%~dp0
+@pushd %script_dir%
+@pushd ..\
+SET js_path=%cd%\js\
 SET js_output_file_name=smartsoft.min.js
-REM @popd
+SET js_tmp=smartsoft.tmp.js
+@popd
 
 ECHO Compresses all .js files into a single .js file called "%js_output_file_name%".
 PAUSE
 
-REM Delete existing minified file
-IF EXIST %js_path%%js_output_file_name% del /F %js_path%%js_output_file_name%
+REM Delete any existing .min file
+IF EXIST %js_path%%js_output_file_name% DEL %js_path%%js_output_file_name%
 
-REM Concatenate all JS files into a .concatenated file
-COPY %js_path%*.js %js_path%%js_concatenated% /b
+REM Concatenate all js files into a tmp file
+COPY %js_path%*.js %js_path%%js_tmp% /b
 
 REM Minify the .concatenated file into the .min file
-java -jar yuicompressor-2.4.2.jar %js_path%%js_concatenated% -o %js_path%%js_output_file_name%
+java -jar yuicompressor-2.4.2.jar %js_path%%js_tmp% -o %js_path%%js_output_file_name%
 
-REM Delete the concatenated file
-IF EXIST %js_path%%js_concatenated% del /F %js_path%%js_concatenated%
+REM Delete the tmp
+DEL %js_path%%js_tmp%
 
 IF ERRORLEVEL 1 (
-	ECHO *ERROR* - Sorry, your JavaScript has not been compiled.
+	ECHO *ERROR* - Sorry, your JS has not been compiled.
 ) ELSE (
-	ECHO Success! Your compiled JavaScript is now in "%js_output_file_name%"
+	ECHO Success! Your compiled JS is now in "%js_output_file_name%"
 )
 PAUSE

@@ -1,5 +1,5 @@
 /*
-Box messages
+Feedback messages
 ----------------------------------*/
 $errorPrimary: #ef0000;
 $errorPastelle: #fdf3f4;
@@ -12,14 +12,14 @@ $infoPastelle: #e8f8fb;
 $iconPositionY: 0;
 $msgIconHeight: 20px;
 $msgIconWidth: 20px;
-$boxMsgPadding: 10px;
+$feedbackMsgPadding: 10px;
 
-.box-msg {
+.feedback-msg {
 	@include borderRadius(3px, 3px, 3px, 3px);
 	border-style:solid;
 	border-width:1px;
 	margin-bottom:10px;
-	padding:$boxMsgPadding;
+	padding:$feedbackMsgPadding;
 	position:relative;
 
 	.sprite {
@@ -45,7 +45,7 @@ $boxMsgPadding: 10px;
 		}
 	}
 
-	.box-msg-title {
+	.feedback-msg-title {
 		font-size:1.4em;
 		font-weight:bold;
 		line-height:1.2em;
@@ -58,7 +58,7 @@ $boxMsgPadding: 10px;
 		background-color:$errorPastelle;
 		border-color:$errorPrimary;
 
-		.box-msg-title {
+		.feedback-msg-title {
 			color:$errorPrimary;
 		}
 
@@ -83,7 +83,7 @@ $boxMsgPadding: 10px;
 		background-color:$successPastelle;
 		border-color:$successPrimary;
 		
-		.box-msg-title {
+		.feedback-msg-title {
 			color:$successPrimary;
 		}
 
@@ -98,7 +98,7 @@ $boxMsgPadding: 10px;
 		background-color:$infoPastelle;
 		border-color:$infoPrimary;
 		
-		.box-msg-title {
+		.feedback-msg-title {
 			color:$infoPrimary;
 		}
 
@@ -115,7 +115,7 @@ $boxMsgPadding: 10px;
 		padding:20px;
 		text-align:center;
 
-		.box-msg-title {
+		.feedback-msg-title {
 			font-family:'VerbBold', arial, helvetica, sans-serif;
 			font-size:1.8em;
 		}
@@ -137,7 +137,7 @@ $boxMsgPadding: 10px;
 		line-height:.8em;
 		position:absolute;
 		right:6px;
-		top:$boxMsgPadding;
+		top:$feedbackMsgPadding;
 
 		.sprite {
 			background-position:-130px 0;
