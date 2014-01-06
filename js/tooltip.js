@@ -9,7 +9,7 @@ function tooltip() {
 					tooltipContent +
 				'</div>' +
 			'</div>'),
-		animationSpeed = 600
+		animationSpeed = 300
 	;
 
 	function createTooltip() {

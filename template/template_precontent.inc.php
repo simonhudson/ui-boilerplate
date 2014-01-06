@@ -4,7 +4,7 @@
 date_default_timezone_set('Europe/London');
 
 //Site paths
-$siteRoot = '/repo/ui-boilerplate/';
+$siteRoot = '/sandbox/ui-boilerplate/';
 $sitePath = array (
 	'root' => $siteRoot,
 	'css' => $siteRoot.'css/',
@@ -15,7 +15,7 @@ $sitePath = array (
 );
 
 //Set whether or not to minify CSS and JS (only setting to true for production/live environments)
-$serveMinifiedCssJs = false;
+$serveMinifiedCssJs = true;
 
 //Enable QUnit tests
 $enableQUnitTests = true;
@@ -28,7 +28,7 @@ $enableQUnitTests = true;
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>UI Boilerplate</title>
 <?php if ($serveMinifiedCssJs) { ?>
-<link href="<?php echo $sitePath['css']; ?>smartsoft.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo $sitePath['css']; ?>smartsoft.css" media="all" rel="stylesheet" type="text/css" />
 <?php } else { ?>
 <link href="<?php echo $sitePath['css']; ?>smartsoft.css" media="all" rel="stylesheet" type="text/css" />
 <?php } ?>
